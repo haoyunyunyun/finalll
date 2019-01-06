@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>捷運</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.css">
+
+
+    <!--    <script src="js/Chart.bundle.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href='//fonts.googleapis.com/css?family=Lora:400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lora:400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lora:400' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+    <style>
+        .row{
+            width:100% !important;
+        }
+        @import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:500&subset=chinese-traditional');
+
+       
+
+        body {
+            position: relative;
+            font-family: sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+             margin:0px;
+             padding:0px;
+   
+   
+        }
+
+        #div1 {
+            background-image: url(assets/start.gif);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+
+        #div2 {
+            background-image: url(assets/end.gif);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        #section1 {
+            background-image: url("assets/mrt4.jpg");
+            height: 50px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+
+        #section1a {
+            background-image: url("assets/mrt4-1.jpg");
+            height: 5px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+             
+        }
+
+        #section1b {
+            background-image: url("assets/mrt3.jpg");
+            height: 5px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+
+        }
+
+        #section1c {
+            background-image: url("assets/mrt2.jpeg");
+            height: 5px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+          #section1d {
+            background-image: url("assets/mrt1.jpg");
+            height: 50px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+             #section1aa {
+            background-image: url("assets/crowd1.jpg");
+            height: 100px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+             
+        }
+          #section1man {
+            
+              background-image: url("assets/man1.JPG");
+          
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          
+             
+        }
+         #section1man2 {
+            background-image: url("assets/man2.jpg");
+            
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+             margin: 0px;
+              padding: 0px;
+              border: 0px;
+        }
+
+      
+               #section1aaa {
+            background-image: url("assets/crowd1.jpg");
+            height: 1000px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+             
+        }
+        #section100{
+           background-image: url("assets/mman2.jpg");
+            height: 1000px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #section1end{
+             background-image: url("assets/platform2.jpg");
+            height: 1000px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+         #section1end2{
+             background-image: url("assets/platform1.jpg");
+            height: 1000px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        p {
+            text-align: left;
+            color: aliceblue;
+            font-size: 22px;
+        }
+
+        nav {
+            font-size: 30px;
+        }
+
+        
+           canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        
+       
+        #hello,#hey,#yo,#green,#orange{
+            color:white;
+            position:absolute;
+            height:25px;
+            width:250px;
+            right:150;
+        
+        }
+
+          .slideanimate {
+            visibility: hidden;
+        }
+
+        .slide {
+            visibility: visible;
+        }
+        #routine {
+    background-image: url(assets/nosleep.JPG);
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+          margin: 0px;padding: 0px;
+    
+}
+
+#eye {
+    background-image: url(assets/eye.JPG);
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     margin: 0px;padding: 0px;
+}
+
+#ear {
+    background-image: url(assets/ear.JPG);
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     margin: 0px;padding: 0px;
+}
+
+.disasterheading {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#lung {
+    background-image: url(assets/lung.jpg);
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;padding: 0px;
+   
+}
+        h1{
+             text-align: center;
+            color: aliceblue;
+            font-size: 60px;
+        }
+        h2{
+             text-align:left;
+            color: aliceblue;
+            
+        }
+        div.intro{
+            font-size: 23px;
+        
+        }
+        img{
+            width:60%;
+            position:absolute;
+        }
+      
+     #union {
+            background-image: url("assets/union.jpg");
+            height: 100px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+             margin: 0px;
+              padding: 0px;
+              border: 0px;
+        }
+        
+        .restTime{
+            width: 100%;
+        }
+
+        .paragraph{
+/*            display: none;*/
+            opacity: 0;
+            height: 300px;
+            width:50%;
+            position:relative;
+            top:45% ;
+            left: 27%
+        }
+        
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id="div1" class="container-fluid bg-secondary" style="height:800px">
+        <div>
+            <h1 style="padding-top: 30%">城市運輸的血與汗——<br>台北捷運司機員</h1>
+        </div>
+    </div>
+    <nav id="navbar" class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top" style="height:60px;padding-top:1px;padding-bottom:1px">
+        <a class="navbar-brand" href="#">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#c" aria-controls="c" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="c">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="padding-bottom:50px;padding-left: 380px">
+                        <a class="nav-link" href="#section1">司機員</a>
+                    </li>
+                    <li class="nav-item" style="padding-top:45px;padding-left: 120px">
+                        <a class="nav-link" href="#section2">
+                            數據
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item" style="padding-top:45px;padding-left: 120px">
+                        <a class="nav-link" href="#section3">改革？</a>
+                    </li>
+                </ul>
+            </div>
+        </a>
+
+    </nav>
+
+    <div id="section1" class="container-fluid" style="padding-top: 80px; height: 1200px">
+        <h2 style="padding-left: 3%"></h2>
+        <div class="container-fluid">
+            <div class="row no-gutters">
+
+                <div class="intro" style="padding-left:15%;padding-right: 15%; padding-top:40%">
+
+
+                    <p>兩線交鋒的大安站，人群如流水穿梭，兩分鐘一班的車次還是來不及消化，等待捷運的人龍蜿蜒到手扶梯口，蔓延至月台上的每一個角落。車廂關門提醒聲刺耳作響，在最後的倒數計時中，有人拎著全身家當自閘門口開始全力衝刺，有人在人潮堆擠夾送下勉強在車內占了個位子，有些飛快的身影，則賭命地在幾秒剎那間衝入車內。隨著超載的列車緩緩駛離，月台又恢復一陣平靜，如此周而復始，早已是台北的日常。綿密的捷運網絡遍布中心與市郊，肩負起整座城市的基礎運作，然而，究竟是誰乘載著如此大量的人流？</p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="section1a" class="container-fluid" style="padding-top: 80px;height : 300px">
+    </div>
+    <div id="section1b" class="container-fluid" style="padding-top: 80px;height : 300px">
+    </div>
+    <div id="section1c" class="container-fluid" style="padding-top: 80px;height:  300px"></div>
+    <div id="section1d" class="container-fluid" style="padding-top: 80px;height:  900px"></div>
+
+    <div id="section1aa" class="container-fluid" style="padding-top: 80px;padding-bottom: 4000px;padding-left:0px;padding-right:0px;">
+
+        <div class="col-7" style="left:5%;top:90px;padding-bottom: 600px">
+
+
+
+            <p>司機員的角色理當功不可沒。一列行駛中的捷運基本上只有一名司機員負責，除了維持穩定的駕駛之外，還需要隨時留意車廂內的臨時狀況、保持與中控後勤的聯繫，最重要的任務，則是監控月台門與車廂門的開關。<strong>「高鐵、台鐵有列車長，但是捷運不一樣，所有事情都是司機員一手包辦」</strong>，在台北捷運已經任職九年的國程，是紅線現役的司機員，國程說，司機的工作包山包海，在行駛中若有突發事件，必須立即回報，如此一邊兼顧著駕駛、一邊監控列車與旅客狀況的工作，讓司機員時時刻刻都戒慎恐懼，一分一秒都不允許分心失神，「同樣都是八小時，坐辦公室和開車是很不一樣，坐辦公室如果很疲憊，可以打個盹，但是開車沒辦法」。
+            </p>
+
+        </div>
+        <div id="section1man" class="container-fluid" style=" height : 900px"> </div>
+        <div id="section1man2" class="container-fluid" style="height : 900px"></div>
+
+
+
+
+        <div class="col-7" style="left:40%;top:200px">
+
+            <p>司機員每天依照公司發放的「任務卡」排班，負責的車次又可以分為「大圈」與「小圈」。以紅線為例，大圈是指淡水、象山來回一趟，大約共需兩個小時；小圈則為北投、大安來回一趟，約耗時一個半小時。而一名司機員一天原則上負責三趟車次，可能是三大圈或六小圈，端視當天拿到的任務卡安排，理論上一天的總工時是八小時。<br><br>
+
+                不過，司機員的實際工時並沒有表面看起來的那麼漂亮。任務卡只是每天最基本的排班，如果遇到大型活動，例如世貿展覽、台北市政府馬拉松，北捷為了因應預期人潮，必須加開許多臨時車，也可能調整營運時間，此時就需要把排休的司機員借調回線上，增加相應的駕駛人力。舉辦大型活動因為可以提前預知並及早規劃，還算容易應付，但有些突發狀況卻相當棘手，例如選舉當日，許多地方開票至凌晨兩、三點，顧慮到輪班間隔的規範，不太可能臨時再把其他司機員叫回線上，因此當天就只能讓在線的司機員幾乎毫無選擇的持續加班。<br><br>
+
+                捷運列車在結束一天的運輸後，必須送進機廠例行檢查，捷運軌道也需要在結束營運後進行夜間巡視工作，以確保行駛安全，正常來說，大約清晨四點開始列車的準備、六點開始營運行駛。然而，在因應人流而提早開始或延遲結束班車的狀況下，幾乎沒有時間進行夜間的安全檢查，就得匆忙開啟隔一天的營運。
+            </p>
+        </div>
+
+        <h2 style="padding-top: 30%;padding-left: 6%">而如果細看任務卡還會發現，北捷把司機工作精準的安排進每一分每一刻。</h2>
+        <div class="col-7" style="padding-top: 5%; left: 5%">
+            <p>早上7:15備車，7:27發車，中間僅有12分鐘可以準備，9:39一趟大圈車班結束，而9:56馬上又是下一趟車班，中間的休息時間為17分鐘。如果是接近中午的班次，12:19結束一趟車班，不過下一趟車的發車時間卻是12:56，也就是中午的休息與吃飯時間只有37分鐘。平均而言，司機員在車次間的休息與轉換時間大概是15分鐘左右，中午的休息及吃飯時間則約為33分鐘。
+                <br> <br>
+                一趟兩小時的車休息15分鐘，換算下來兩趟休息約30分，其實就是踩著《勞基法》，四小時休息半小時的規定。在兩線交集的站點，司機會多留一點時間等待旅客換車，但有時人潮過多、或者有人臨時衝上車，都會讓列車延遲發車，而就算如此拖延了行車時間、與原本任務卡精準訂定的時刻有誤差，司機員仍要照著任務卡準時跑下一班車。
+                <br> <br><strong>換言之，班次之間的休息時間是被壓縮。開車需要極高的專注力，用短短十餘分鐘的間隔休息，其實是以駕駛來賭乘客的命。</strong></p>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="section1aaa" class="container-fluid" style="padding-top: 80px;padding-bottom: 150px">
+    </div>
+
+    <div id="section100" class="container-fluid" style="padding-top: 80px;padding-bottom: 1500px">
+        <div class="row">
+            <div class="col-6" style="padding-top: 15%;padding-left: 10%">
+                <p>
+                    「像我們這樣其實就是隱形工時，很多真正的工作時間都被公司吃掉」，與國程同期進入北捷擔任司機員的小蘇指出，車次間短短十餘分鐘的休息，還要包含從月台走上來、走下去下個月台的時間，而這其中還得趕著上廁所，「在車上才算工時，下車在走路都不算」。而為了「解決」司機員在折返換車時沒有辦法如廁，公司在捷運駕駛艙裡設有尿袋，不過，尿袋即使是男性也很難使用，除了使用尿袋多少使人感到不自在之外，由於站間的行車時間極短，在數分鐘內很難要同時掌握行車狀況及小便，<strong>「與其發尿袋，不如給長一點的休息時間」。</strong><br><br>
+
+                    北捷精準的計算不只是工時的分配，還包括排班。在沒有備班人力的情況下，司機員負責的工作就是一個蘿蔔一個坑，如果午班第一趟車沒有人跑，也只能把早班快下班的人緊急調來繼續接下去。而甚至請假次數的多寡也會影響考績，也因此，司機員幾乎很難請假，抱病跑車的案例不在少數。「很多同仁其實身上都會帶著消炎阿、綠油精甚麼的，也是為了臨時救急」，小蘇說，「大家也是傾向不要給人家的麻煩，因為都知道在沒有備班的人力下，一個人請假可能造成其他人過勞」。
+
+                </p>
+            </div>
+            <div class="col-6" style="padding-top: 7% ">
+                <h2>「在沒有備班的人力下，
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;一個人請假可能造成其他人過勞」</h2>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <div id="section1end" class="container-fluid" style="padding-top: 80px;padding-bottom: 1300px">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="padding-top: 30%">
+                <p>
+                    北捷近年開始追求績效指數，在駕駛工作上，具體而言就是要求「延誤時間縮短」、「服務品質提高」，於此時期提出的任務卡「優化」，也正是上述幾乎使人無法喘息的工時與班表，而這一切，是為了能使台北捷運系統與國際評比。如此也創造了旅客至上的服務準則，國程表示，再不合理的投訴公司都會接受，例如甚至有旅客抱怨遲到的原因是「捷運開太慢」，不過這樣投訴的結果都是由第一線工作人員去承擔、去「改善」，國程無奈說道，<strong>「公司把我們的行業當服務業，但我們是交通運輸，我們的使命是把旅客載到安全的地點，而非去『服務』旅客」。</strong>
+                    <br><br>
+                    2017年4月21日，一名負責行駛新蘆線的司機員，在抵達終點站南勢角後下車，卻突然倒地，最後送醫搶救仍宣告不治。然而，此次事件讓國程和小蘇至今難忘的，是公司所發布的新聞稿如此寫道：「…本次事件沒有造成任何延誤」。讓司機員心寒的是，即使出了人命，公司仍然還是堅持服務旅客至上的原則，而非想辦法極力保護員工，「我們的命有這麼不值錢嗎？」。猝死事件是駕駛工作風險的縮影，不過面對如此困境，司機員們該如何因應？
+
+
+                </p>
+            </div>
+
+            <!--    ============================運輸量==============================  -->
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <div id="section1end2" class="container-fluid" style="padding-top: 80px;padding-bottom: 800px"></div>
+
+    <div id="section2" class="container-fluid " style="padding-top: 80px;padding-bottom: 50px;background-color: rgba(79, 79, 79, 0.2)">
+        <h1 style="color: #696969;" text align="center">運輸量</h1>
+
+        <div style="width:75%;">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="container-fluid" style="min-height: 500px;">
+            <div class="row">
+                <div class="col-md-6 slideanimate" data-direction="fadeInUp">
+                    <p style="color: #696969; margin-top:70px;margin-left:10px;margin-right:10px;">近幾年來，捷運乘載的運輸量呈倍數成長，然而，司機員的招募數量卻並未因此有大幅成長，始終無法補齊的備班人力，成為現行司機員勢必得攬下的一大重擔。</p>
+
+                </div>
+                <div class="col-md-6">
+                    <div style=""><canvas id="chartjs-6" class="chartjs" width="1110" height="554" style="display: block; height: 277px; width: 555px;"></canvas></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--    ============================旅運量==============================  -->
+    <div class="container-fuild" style="padding-top: 80px;padding-bottom: 400px;background-color: rgba(130, 130, 130, 0.2)">
+        <div class="container-fuild" style="min-height:260px;">
+
+            <h1 style="color: #696969;" text align="center">各線旅運量 </h1>
+            <h2 style="color: #696969;padding-left:540px;" text align="center">以108年11月出站資料為例</h2>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-5 slideanimate"data-direction="fadeInLeft">
+               <p style="color: #696969;margin-left:25px;margin-bottom:10px;">捷運五大線載客量的差異，延伸出各線司機員工作強度不均等的問題。由於站數多寡、路線長短與地理位置等原因，司機員甚至曾開玩笑地說「新蘆線的尖峰運量與板南線的離峰運量差不到哪裡去。」明明工作量不同，卻領一樣的薪水，使得淡水信義、板南線成為眾司機員眼中吃力不討好的工作，人力缺乏的問題更加嚴峻。</p>
+            </div>
+            <div id="barchart" class="col-md-7">
+                <div id="hello" data-width=500 style="top:0px;">淡水信義線:19497250人次</div>
+                <div id="hey" data-width=480 style="top:30px;">板南線:17160003人次</div>
+                <div id="green" data-width=400 style="top:60px;">松山新店線:11195518人次</div>
+                <div id="orange" data-width=390 style="top:90px;">中和新蘆線:10027934人次</div>
+                <div id="yo" data-width=370 style="top:120px;">文湖線:9815414人次</div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+  
+    <!--    ============================工作項目==============================  -->
+    <div class="container-fuild" style="padding-top: 80px;padding-bottom: 200px;background-color: rgba(207, 207, 207, 0.2)">
+        <div class="container-fuild" style="min-height:220px;">
+            <h1 style="color: #696969;" text align="center">司機員的工作項目 </h1>
+
+        </div>
+
+        <div class="row">
+            <div data-direction="fadeInLeft" class="col-md-6 slideanimate " style="height:300px;"><img src="assets/control.png" class="rounded-circle" style="width:300px;height:300px;float:right;margin-left: 420px;">
+
+                <h1 style="font-size:25px;color: #696969;margin-right: 240px;">閘門操縱</h1>
+
+
+                <p style="color: #696969;width:50%;height: 30px;margin-left: 55px;margin-bottom: 40px;">除了駕駛之外，控管月台以及車廂閘門就是司機員最重要的工作了。由於捷運的人流快、人潮多，司機員必須隨時注意月台上的乘客動向：是不是有乘客要在最後一秒衝進車廂？是不是有人還沒進到車廂內？…。閘門的監控不只攸關到列車是否會延誤或準時到站，當然也關係到旅客的乘車安全，因此司機員在其中是不可忽視的關鍵角色。
+                </p>
+
+            </div>
+
+            <div data-direction="fadeInRight" class="col-md-6 slideanimate" style="height:300px;"><img src="assets/info.png" class="rounded-circle" style="width:300px;height:300px;float:left;">
+                <h1 text align="center" style="font-size:25px;color: #696969;margin-left:280px;">乘客服務</h1>
+
+
+                <p style="color: #696969;width:50%;height: 30px;margin-left: 320px;margin-bottom: 150px;">捷運公司近年為了追求良好的企業形象、甚至爭取國際評比，開始不斷強調乘客／顧客的服務。如此服務導向的工作內容也延伸到了司機員，就曾經有旅客向北捷「投訴」捷運開太慢、車沒有等人，然而這不只是不合理的投訴，同時也影響到司機員的本職工作：「公司把我們的行業當服務業，但我們的使命是把旅客載到安全的地點，而非去服務旅客」。
+                </p>
+            </div>
+
+            <div class="container-fluid">
+                <img src="assets/driverr.png" class="rounded-circle" style="width:400px;height:400px;display:block;margin:auto;position:relative"></div>
+
+
+            <div data-direction="fadeInLeft" class="col-md-6 slideanimate" style="height:300px;"><img src="assets/wheel.png" class="rounded-circle" style="width:300px;height:300px;float:right;margin-left: 401px;">
+                <h1 style="font-size:25px;color: #696969;margin-right:280px; ">捷運駕駛</h1>
+
+
+                <p style="color: #696969;width:50%;height: 30px;margin-left: 55px;margin-bottom: 40px;">司機員最主要的任務，顧名思義當然就是駕駛工作了。雖然現在捷運的行駛已經依靠許多自動化的設備，但是機械設備仍然只是輔助工具，人力的監控、臨時應變的處理依舊是必要且重要的。因此，捷運駕駛工作雖然看似時間不長，但由於需要高度的專注力，其勞動密度並不低於坐辦公室的工作。
+                </p>
+
+            </div>
+
+            <div data-direction="fadeInRight" class="col-md-6 slideanimate" style="height:300px;"><img src="assets/bbcall.png" class="rounded-circle" style="width:300px;height:300px;float:left;">
+
+                <h1 text align="center" style="font-size:25px;color: #696969;margin-left:280px;">中控回報</h1>
+                <p style="color: #696969;width:50%;height: 30px;margin-left: 320px;">司機員除了駕駛之外，還得分神與中控中心保持聯繫，其實這樣等於是同時把駕駛員與車掌的角色集於一身。如果捷運在行駛中發生突發事故，例如有乘客受傷、甚至隨機攻擊事件、或者是列車設備故障等等，都是司機員必須在一邊駕駛的過程中，一邊要去處理的。「高鐵、台鐵有列車長，但是捷運不一樣，我們就是所有的事情都是司機員一手包辦」。
+
+                </p>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--    ============================Lora開始改==============================  -->
+    <div class="container-fuild loraTest" style="padding-top: 80px;padding-bottom: 200px;background-color: rgba(207, 207, 207, 0.2);position:relative;">
+        <div class="restTime">
+            <h1 class="pb-5" style="color: #696969;" text-align="center">工時</h1>
+            <div class="resrTime_chart" id="worktime" style="background-color: red;width:80%;height: 30px;text-align: center;position:relative;top:33%;left: 10%;">
+
+                <div class="restTime_chart_inner" id="inner" style="background-color: pink;width:20% ;height: 30px;margin:0 auto">
+                    <p style="text-align:center;">
+                        休息時間
+                        <p>
+                </div>
+            </div>
+        </div>
+
+        <div class="paragraph mt-5">
+            <p style="color: #696969;margin-top:100px;">
+                在車班與車班間，車次間短短十餘分鐘的休息，還要包含從月台走上來、走下去下個月台的時間，而這其中還得趕著上廁所，「在車上才算工時，下車在走路都不算」。而為了「解決」司機員在折返換車時沒有辦法如廁，公司在捷運駕駛艙裡設有尿袋，不過，尿袋即使是男性也很難使用，除了使用尿袋多少使人感到不自在之外，由於站間的行車時間極短，在數分鐘內很難要同時掌握行車狀況及小便，<strong>「與其發尿袋，不如給長一點的休息時間」。</strong>
+            </p>
+        </div>
+    </div>
+    <!--    ============================end==============================  -->
+
+    <div class="container-fuild jobDisaster" style="padding-top: 80px;padding-bottom: 200px;background-color: rgba(232, 232, 232, 0.2)">
+        <h1 style="color: #696969;" text align="center">職業災害 </h1>
+
+        <div id=disaster class="container-fluid" style="margin:0px;padding: 0px">
+            <div id=routine class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4"></div>
+
+                    <div class="col-md-8">
+                        <h2 class="disasterheading" style="color: #696969;">輪班作息</h2>
+                        <p style="color: #696969; margin-top:30px;margin-left:10px;margin-right:10px;">駕駛工作也是輪班制，尤其是夜班的駕駛工作最為辛苦，許多司機員深受作息不正常而困擾，身體也會出現如血壓不穩的症狀。此外，另一個影響最為深刻的，則是密集工時中的極短休息時間：跑完兩小時多的班車，僅有間隔約15分鐘的休息時間，就要趕著去下一趟；而吃飯時間，平均更只有33分鐘。司機員因為休息時間極為不足，除了可能導致精神疲憊，也常常有腸胃不適的問題發生。</p>
+
+                    </div>
+                </div>
+            </div>
+            <div id=eye class="container-fluid" style="margin: 0px;padding: 0px">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <h2 class="disasterheading" style="color: #696969;">視力退化</h2>
+                        <p style="color: #696969; margin-top:30px;margin-left:10px;margin-right:10px;">除了文湖線以及北投線末端之外，大部分的捷運列車都是在地下行駛，地下鐵路是全黑的道路空間，然而駕駛車艙內有許多機械、儀表設備需要監控，司機員在裡面的狀態，其實就像是晚上關燈玩手機一樣，一邊注意前方的駕駛軌道、一邊還要回來控制黑暗中發光的儀表板，對於視力是有一定的傷害。
+
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id=ear class="container-fluid" style="margin: 0px;padding: 0px">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <h2 class="disasterheading" style="color: #696969;">聽力受損</h2>
+                        <p style="color: #696969; margin-top:30px;margin-left:10px;margin-right:10px;">在乘坐捷運時，有注意過列車所發出的高分貝聲響嗎？捷運在行駛時，其實是會發出巨大的噪音的，而這其實是列車在地下封閉空間高速運行時所產生的風切聲。但正因為是在地下的密閉空間，高分貝的噪音也不容易分散出去，換言之，也就把原本的噪音集中起來，聽到的聲響也就更大，而這一切都是司機員每天所必承受的聽覺壓力。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id=lung class="container-fluid" style="margin: 0px;padding: 0px">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <h2 class="disasterheading" style="color: #696969;">粉塵汙染</h2>
+                        <p style="color: #696969; margin-top:30px;margin-left:10px;margin-right:10px;">搭乘捷運時，乘客只會待在月台及車廂內，不容易發現列車外的狀況。然而，列車所行駛的軌道其實存在很多灰塵與粉塵，在高速行駛之下，粉塵時常隨之起舞，捷運進站時尤其看得最明顯，而司機員位於第一節車廂駕駛與進出，與軌道距離最近，自然又得承受這樣的粉塵汙染。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="section3">
+        <div id=union class="container-fluid bg-warning" style="padding-top: 80px;padding-bottom: 1200px">
+            <h1 style="color:white" text align="center">改革</h1>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <p style="padding-top: 50px;padding-left: 3%">讀到這裡，相信讀者對於任務卡優化將對司機員造成什麼樣的影響有了大概的了解，面對北捷行車處處長在沒有徵求基層意見的情況下，宣布執行任務卡優化，與此同時，同樣身為運輸業的華航空服員群起抗爭，在種種刺激與啟發下，也意識到企業工會的效率不彰與矛盾的設立性質，使得北捷司機員開始思考透過外部的力量來解決他們所面臨的問題，因此，才有了「北區捷運電聯車駕駛產業工會」的出現。<br><br>
+
+                        　　小蘇和國程都是工會的幹部，而工會的秘書怡靜也在百忙之中抽空接受訪問，說明工會的主要訴求。<br><br>
+
+                        　　除了最基本的薪資過低問題，工會還希望能解決管理階層與基層在行車規章制定上的認知落差。現在的北捷管理階層鮮少有人有行車駕照和駕駛經驗，這使得他們對於司機員實際的工作狀況容易產生不符實的想像，高層制定的規則與服務至上的指導原則使司機員感到窒礙難行的狀況時常發生。另外，人力問題也是工會努力的方向之一，爭取設立備班的制度，讓人力不再捉襟見肘，有突發狀況時，也能分散額外工作量帶來的壓力。<br><br>
+
+                        　　他們也指出人力問題的另一個面向，即捷運各線司機員工作量不均等的問題。淡水信義線因為行經眾多觀光景點，在假日時運量較大，板南線則沒有平日假日之分，運量一直都很高，而中和新蘆線則相對來說運量較低，甚至有一說稱中和新蘆線的尖峰運量差不多只等於板南線的離峰運量。運量不均等連帶使得司機員的工作強度不均等。明明工作量不同，卻領一樣的薪水，使得板南線成為眾司機員眼中吃力不討好的工作，人力缺乏的問題更加嚴峻。工會提出想透過「乘務津貼」的機制來解決這個問題，簡單來說，就是司機員每駕駛一個班次都另外給一筆乘務津貼，使得多付出的勞務能夠得到相應的回報。
+
+
+
+                    </p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div2" class="container-fluid bg-secondary" style="height:1200px">
+        <div>
+            <h1 style="padding-top: 40%">日復一日，<br>捷運司機員的一天正要開始。</h1>
+            <p style="padding-top: 20%; text-align: center">總製作／陳子萱、蕭瑜、游昊耘</p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    <script>
+        var ctx =
+            document.getElementById("chartjs-6").getContext('2d');
+
+        var chartdata = {
+            type: 'line',
+            data: {
+                labels: ["2008", "2011", "2014", "2017"],
+                datasets: [{
+                    label: '乘客累積人次（單位：百萬）',
+                    data: [450, 566, 679, 746],
+                    borderColor: "rgb(255, 99, 132)",
+                    backgroundColor: ["rgba(255, 99, 132, 0.2)"]
+                }, {
+                    label: "司機人數",
+                    data: [400, 450, 500, 600],
+                    type: 'line',
+                    fill: false,
+                    borderColor: ["rgb(54, 162, 235)"]
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                responsive: true
+            }
+        };
+
+
+        var inView = false;
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#chartjs-6").offset().top;
+                if (objpos < winTop + winh * 0.5 && !inView) {
+                    new Chart(ctx, chartdata);
+                    inView = true;
+                    console.log("successful!!");
+                }
+
+            });
+        });
+
+
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#hello").offset().top;
+                if (objpos - winh * 0.8 < winTop) {
+                    $("#hello").each(function() {
+                        var w = 250 + $(this).data("width") + 'px';
+                        $(this).animate({
+                            width: w,
+                            opacity: "1",
+                            backgroundColor: "#ff0000"
+                        }, 1000);
+                    });
+                }
+
+            });
+        });
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#hey").offset().top;
+                if (objpos - winh * 0.8 < winTop) {
+                    $("#hey").each(function() {
+                        var w = 250 + $(this).data("width") + 'px';
+                        $(this).animate({
+                            width: w,
+                            opacity: "1",
+                            backgroundColor: "#0000ff"
+                        }, 1000);
+                    });
+                }
+
+            });
+        });
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#yo").offset().top;
+                if (objpos - winh * 0.8 < winTop) {
+                    $("#yo").each(function() {
+                        var w = 250 + $(this).data("width") + 'px';
+                        $(this).animate({
+                            width: w,
+                            opacity: "1",
+                            backgroundColor: "#E3A869"
+                        }, 1000);
+                    });
+                }
+
+            });
+        });
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#green").offset().top;
+                if (objpos - winh * 0.8 < winTop) {
+                    $("#green").each(function() {
+                        var w = 250 + $(this).data("width") + 'px';
+                        $(this).animate({
+                            width: w,
+                            opacity: "1",
+                            backgroundColor: "#007500"
+                        }, 1000);
+                    });
+                }
+
+            });
+        });
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var winTop = $(window).scrollTop();
+                var winh = $(window).height();
+                var objpos = $("#orange").offset().top;
+                if (objpos - winh * 0.8 < winTop) {
+                    $("#orange").each(function() {
+                        var w = 250 + $(this).data("width") + 'px';
+                        $(this).animate({
+                            width: w,
+                            opacity: "1",
+                            backgroundColor: "#ffd306"
+                        }, 1000);
+                    });
+                }
+
+            });
+        });
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $(".slideanimate").each(function() {
+                    var winTop = $(window).scrollTop();
+                    var winh = $(window).height();
+                    var objpos = $(this).offset().top;
+                    if (objpos < winTop + winh * 0.8) {
+                        $(this).addClass("animated slide " + $(this).data("direction"));
+                    }
+                    if (winTop == 0) {
+                        $(this).removeClass("animated slide" + $(this).data("direction"));
+                    }
+
+                });
+            });
+
+
+            //            Lora start test
+            $(window).scroll(function() {
+                $('.loraTest').each(function(i) {
+
+                    var loraTest = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    //                  console.log('loraTest!!');
+                    if (bottom_of_window > loraTest) {
+                        console.log('loraTest!!');
+                        $('.restTime').css('position', 'fixed');
+                        $('.restTime').css('top', '400px');
+                        $('.restTime_chart_inner').animate({
+                            'width': '80%'
+                        }, 500);
+                        $('.paragraph').animate({
+                            'opacity': '1'
+                        }, 500);
+                        //                      if( bottom_of_window > next_of_widow  ){
+                        //                          $('.restTime').css('position','');   
+                        //                          console.log('test');
+                        //                          
+                        //                      }
+
+                    }
+                });
+
+                $('.paragraph').each(function(i) {
+                    var paragraph = $(this).offset().top + 50;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if (bottom_of_window > paragraph) {
+                        $('.restTime').css('position', '');
+                        console.log('............');
+
+
+                    }
+                });
+            });
+            //            Lora end test
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>
